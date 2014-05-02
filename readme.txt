@@ -24,7 +24,7 @@ This WordPress plugin that  makes it quick and easy for you to:
 
 2) When a visitor sees the page, they will find an entry box requiring their email and name, and will be allowed to enter every 24 hours until the contest ends.
 
-3) All published giveaways will appear at the archive page for giveaways.  When contest has ended, it will still appear in the archive, but now it will indicate that it is closed. If you have your urls set to the "Post name" structure, your the archive page will be found at http://your-site-name/giveaway/
+3) All published giveaways will appear at the archive page for giveaways.  When contest has ended, it will still appear in the archive, but now it will indicate that it is closed. If you have your urls set to the "Post name" structure, your archive page will be found at http://your-site-name/giveaway/
 
 4) To view a sortable table of entries, go to the "Give it Away Now Entries" page found under the settings tab.
 

@@ -1,0 +1,37 @@
+
+/* Single Page Styles */
+#gan-form-wrap {
+  border-radius:5px;
+  padding:10px;
+  background:#efefef;
+  margin:10px auto;
+  width:320px;
+  text-align:center;
+}
+#gan-submit-form div {
+  margin:10px 0;
+}
+#gan-submit-form div input {
+  width:220px;
+}
+
+/* Summary Page Styles */
+#gan-wait-wrap {
+  font-size:115%;
+  color:#a5d006;
+  text-align:center;
+}
+#gan-ended-wrap {
+  font-size:115%;
+  color:#f00;
+}
+#gan-archive-wrap .gan-item-wrap {
+  display: block;
+  padding: 5px 5px 15px 5px;
+  background: #efefef;
+  float: left;
+  margin: 10px;
+}
+.giveaway a.dirs {
+  margin:10px;
+}

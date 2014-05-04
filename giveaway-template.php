@@ -54,20 +54,24 @@ jQuery(document).ready(function() {
   </div>
   </div>
 
-<?php if (!empty(get_post_meta( $post->ID, 'gan_why', true ))) { ?>
+<?php
+  $the_why = !empty(get_post_meta( $post->ID, 'gan_why', true )) ? get_post_meta( $post->ID, 'gan_why', true ) : '';
+if (!empty($the_why)) { ?>
 <div class="gan-wrap">
    <div class="gan-interior-wrap">
    <h4>Why we love this product</h4>
-   <p class="giveaway-details"><?php print get_post_meta( $post->ID, 'gan_why', true ); ?></p>
+   <p class="giveaway-details"><?php print $the_why; ?></p>
 </div>
 </div>
 <? } ?>
 
-<?php if (!empty(get_post_meta( $post->ID, 'gan_about', true ))) { ?>
+<?php
+  $the_about = !empty(get_post_meta( $post->ID, 'gan_about', true )) ? get_post_meta( $post->ID, 'gan_about', true ) : '';
+if (!empty($the_about)) { ?>
 <div class="gan-wrap">
    <div class="gan-interior-wrap">
    <h4>About this Giveaway</h4>
-   <p class="giveaway-details"><?php print get_post_meta( $post->ID, 'gan_about', true ); ?></p>
+   <p class="giveaway-details"><?php print $the_about; ?></p>
 </div>
 <? } ?>
    </div>
@@ -79,9 +83,11 @@ jQuery(document).ready(function() {
    <span class="giveaway-details"><?php print $date; ?></span>
 <br />
 <? } ?>
-<?php if (!empty(get_post_meta( $post->ID, 'gan_quantity', true ))) { ?>
+<?php
+  $the_quantity = !empty(get_post_meta( $post->ID, 'gan_quantity', true )) ? get_post_meta( $post->ID, 'gan_quantity', true ) : '';
+   if (!empty($the_quantity)) { ?>
 <span class="give-label">Number Available:</span>
-<span class="giveaway-details"><?php print get_post_meta( $post->ID, 'gan_quantity', true ); ?></span>
+<span class="giveaway-details"><?php print $the_quantity; ?></span>
 <br />
 <? } ?>
    <span class="give-label">Max Entries Per Day:</span>

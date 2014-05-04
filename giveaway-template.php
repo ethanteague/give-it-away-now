@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
   </div>
 
 <?php
-  $the_why = !empty(get_post_meta( $post->ID, 'gan_why', true )) ? get_post_meta( $post->ID, 'gan_why', true ) : '';
+  $the_why = get_post_meta( $post->ID, 'gan_why', true );
 if (!empty($the_why)) { ?>
 <div class="gan-wrap">
    <div class="gan-interior-wrap">
@@ -66,7 +66,7 @@ if (!empty($the_why)) { ?>
 <? } ?>
 
 <?php
-  $the_about = !empty(get_post_meta( $post->ID, 'gan_about', true )) ? get_post_meta( $post->ID, 'gan_about', true ) : '';
+  $the_about = get_post_meta( $post->ID, 'gan_about', true );
 if (!empty($the_about)) { ?>
 <div class="gan-wrap">
    <div class="gan-interior-wrap">
@@ -84,7 +84,7 @@ if (!empty($the_about)) { ?>
 <br />
 <? } ?>
 <?php
-  $the_quantity = !empty(get_post_meta( $post->ID, 'gan_quantity', true )) ? get_post_meta( $post->ID, 'gan_quantity', true ) : '';
+  $the_quantity = get_post_meta( $post->ID, 'gan_quantity', true );
    if (!empty($the_quantity)) { ?>
 <span class="give-label">Number Available:</span>
 <span class="giveaway-details"><?php print $the_quantity; ?></span>
@@ -105,7 +105,9 @@ $today = strtotime($dt->format('m/d/Y'));
 global $wpdb;
 $table_name = $wpdb->prefix . "give_it_away";
 
-if (!empty($_POST['name']) && !empty($_POST['email'] && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+$email_san = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
+if (!empty($_POST['name']) && !empty($email_san)) {
 // Put the value in the table
   $wpdb->insert( $table_name, array( 'name' => $_POST['name'], 'email' => $_POST['email'], 'post_id' => $_POST['post_id']  ) );
 }

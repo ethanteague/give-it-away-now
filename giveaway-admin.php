@@ -5,23 +5,19 @@ add_action('admin_menu', 'giveaway_plugin_menu');
 // Create our admin settings page
 function giveaway_plugin_menu() {
   global $settings;
-  $settings = add_options_page('GIve it Away Now Entries', 'Give it Away Now Entries', 'manage_options', 'giveaway-form.php', 'giveaway_plugin_page');
-  add_action( 'admin_enqueue_scripts', 'giveaway_enqueue_script' );
+  $settings = add_options_page('Give it Away Now Entries', 'Give it Away Now Entries', 'manage_options', 'giveaway-form.php', 'giveaway_plugin_page');
   add_action( 'admin_enqueue_scripts', 'giveaway_enqueue_style' );
+  add_action( 'admin_enqueue_scripts', 'giveaway_enqueue_script' );
   add_action("admin_head-{$settings}",'giveaway_inline_js');
 }
 
-
-
 // Load our js and css for the admin settings page table
 function giveaway_enqueue_script() {
-  $path = plugins_url('give-it-away-now/');
-  wp_enqueue_script( 'giveaway-admin-js',$path.'includes/datatables/media/js/jquery.dataTables.min.js', true );
+  wp_enqueue_script( 'giveaway-admin-js',plugins_url( 'includes/datatables/media/js/jquery.dataTables.min.js' , __FILE__ ), true );
 }
 
 function giveaway_enqueue_style() {
-  $path = plugins_url('give-it-away-now/');
-  wp_enqueue_style( 'giveaway-admin-css',$path.'includes/datatables/media/css/jquery.dataTables.css', true );
+  wp_enqueue_style( 'giveaway-admin-css',plugins_url( 'includes/datatables/media/css/jquery.dataTables.css' , __FILE__ ), true );
 }
 
 function giveaway_inline_js() {

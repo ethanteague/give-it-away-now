@@ -166,10 +166,9 @@ add_filter( "single_template", "giveaway_template" );
 add_filter( "archive_template", "giveaway_template" );
 
 // Add custom image sizes
-if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'giveaway-thumb', 175, 175, true);
-	add_image_size( 'giveaway-featured', 600, 250, true);
-}
+add_image_size( 'giveaway-thumb', 175, 175, true);
+add_image_size( 'giveaway-featured', 600, 250, true);
+
 
 // Add settings link on plugin page
 function giveaway_settings_link($links) {

@@ -1,5 +1,5 @@
 === Give It Away Now! ===
-Contributors: EthanT 
+Contributors: EthanT
 Tags: giveaways,custom post type,contest,entry,giveaways
 License: GPLv2
 Requires at least: 3.0
@@ -17,9 +17,6 @@ This WordPress plugin that  makes it quick and easy for you to:
 
 * View the results in admin settings page
 
-
-== HOW TO USE ==
-
 1) Plugin creates a "Giveaways" content type with "Why," "About," "Rules," "Number of Prizes" (available), and an "End Date."  Fill in these fields, upload a featured image, and  the giveaway will be created for you.
 
 2) When a visitor sees the page, they will find an entry box requiring their email and name, and will be allowed to enter every 24 hours until the contest ends.
@@ -27,6 +24,10 @@ This WordPress plugin that  makes it quick and easy for you to:
 3) All published giveaways will appear at the archive page for giveaways.  When contest has ended, it will still appear in the archive, but now it will indicate that it is closed. If you have your urls set to the "Post name" structure, your archive page will be found at http://your-site-name/giveaway/
 
 4) To view a sortable table of entries, go to the "Give it Away Now Entries" page found under the settings tab.
+
+5) Please note that plugin creates a custom image size, so giveaway images should be uploaded through the giveaway content type to insure they appear properly.
+
+6) If giveaways do not appear when clicking the view link, or paths appear broken, the permalink pattern might be stuck - choosing a different permalink setting, and then switching back to the original setting should fix.
 
 
 == Installation ==

@@ -117,8 +117,8 @@ if(!in_array($post->ID,$_COOKIE)) {?>
   <h4>Enter to Win!</h4>
   <form id="gan-submit-form" name="gan-submit-form" action="" method="post" >
   <div>
-  <input type="hidden" name="post_id" value="<?phpphp print $post->ID; ?>" />
-  <input type="hidden" name="post_url" value="<?phpphp print get_permalink($post->ID); ?>" />
+  <input type="hidden" name="post_id" value="<?php print $post->ID; ?>" />
+  <input type="hidden" name="post_url" value="<?php print get_permalink($post->ID); ?>" />
   <label for="name">Name *</label>
   <input type="text" name="name" id="name" />
   </div>

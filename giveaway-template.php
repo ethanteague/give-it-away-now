@@ -33,7 +33,7 @@ print '<link type="text/css" rel="stylesheet" href="' . $url . 'css/gan_style.cs
 
   // Set our cookie if fields are legit
   if(regex.test(demail) && x !== ''){
-    jQuery.cookie('<?phpphp echo "page_id_cookie-".$post->ID; ?>', '<?phpphp echo $post->ID; ?>', { expires: 1, path: '/' });
+    jQuery.cookie('<?php echo "page_id_cookie-".$post->ID; ?>', '<?php echo $post->ID; ?>', { expires: 1, path: '/' });
   }
   }
 

@@ -4,7 +4,7 @@ Tags: giveaways,custom post type,contest,entry,giveaways
 License: GPLv2
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 1.1
+Stable tag: 1.2
 
 A WordPress plugin for creating online giveaways and contests.  Users can enter email drawings daily.
 

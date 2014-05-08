@@ -27,7 +27,7 @@ function giveaway_inline_js() {
       jQuery('#giveaway-admin-table').dataTable();
     } );
   </script>
-<?
+<?php
 }
 
 // Grab our entries from the db

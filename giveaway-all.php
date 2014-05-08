@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
   })
 
 </script>
-<?
+<?php
   $page_num_raw = $_SERVER['QUERY_STRING'];
 $page_num = explode('=', $page_num_raw);
 $page_arg = !empty($page_num[1]) ? $page_num[1] : 1;

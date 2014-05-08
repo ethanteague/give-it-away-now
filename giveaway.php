@@ -3,7 +3,7 @@
  * Plugin Name: Give it Away Now
  * Plugin URI: http://virtualputty.com
  * Description: A plugin to make daily giveaways for blog sites.
- * Version: 1.0
+ * Version: 1.2
  * Author: Ethan Teague
  * Author URI: http://virtualputty.com
  * License: GPLv2 or later

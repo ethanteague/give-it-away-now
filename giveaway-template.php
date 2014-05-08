@@ -33,7 +33,7 @@ print '<link type="text/css" rel="stylesheet" href="' . $url . 'css/gan_style.cs
 
   // Set our cookie if fields are legit
   if(regex.test(demail) && x !== ''){
-    jQuery.cookie('<?php echo "page_id_cookie-".$post->ID; ?>', '<?php echo $post->ID; ?>', { expires: 1, path: '/' });
+    jQuery.cookie('<?phpphp echo "page_id_cookie-".$post->ID; ?>', '<?phpphp echo $post->ID; ?>', { expires: 1, path: '/' });
   }
   }
 
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
 </script>
 
 
-  <main class="giveaway">
+  <div id="giveaway-wrap">
 
   <div class="gan-wrap">
   <div class="gan-interior-wrap">
@@ -63,7 +63,7 @@ if (!empty($the_why)) { ?>
    <p class="giveaway-details"><?php print $the_why; ?></p>
 </div>
 </div>
-<? } ?>
+<?php } ?>
 
 <?php
   $the_about = get_post_meta( $post->ID, 'gan_about', true );
@@ -73,7 +73,7 @@ if (!empty($the_about)) { ?>
    <h4>About this Giveaway</h4>
    <p class="giveaway-details"><?php print $the_about; ?></p>
 </div>
-<? } ?>
+<?php } ?>
    </div>
 
    <div class="gan-wrap">
@@ -82,14 +82,14 @@ if (!empty($the_about)) { ?>
 <span class="give-label">Giveaway Ends:</span>
    <span class="giveaway-details"><?php print $date; ?></span>
 <br />
-<? } ?>
+<?php } ?>
 <?php
   $the_quantity = get_post_meta( $post->ID, 'gan_quantity', true );
    if (!empty($the_quantity)) { ?>
 <span class="give-label">Number Available:</span>
 <span class="giveaway-details"><?php print $the_quantity; ?></span>
 <br />
-<? } ?>
+<?php } ?>
    <span class="give-label">Max Entries Per Day:</span>
    <span class="giveaway-details">1</span>
    <br />
@@ -97,7 +97,7 @@ if (!empty($the_about)) { ?>
    </div>
 
    <div class="gan-wrap">
-<?
+<?php
 
 $dt = new DateTime();
 $date = strtotime($date);
@@ -117,8 +117,8 @@ if(!in_array($post->ID,$_COOKIE)) {?>
   <h4>Enter to Win!</h4>
   <form id="gan-submit-form" name="gan-submit-form" action="" method="post" >
   <div>
-  <input type="hidden" name="post_id" value="<?php print $post->ID; ?>" />
-  <input type="hidden" name="post_url" value="<?php print get_permalink($post->ID); ?>" />
+  <input type="hidden" name="post_id" value="<?phpphp print $post->ID; ?>" />
+  <input type="hidden" name="post_url" value="<?phpphp print get_permalink($post->ID); ?>" />
   <label for="name">Name *</label>
   <input type="text" name="name" id="name" />
   </div>
@@ -130,24 +130,24 @@ if(!in_array($post->ID,$_COOKIE)) {?>
   </form>
 
   </div><!-- .gan-form-wrap -->
-<? }
+<?php }
 
   else if ($today > $date) {
 ?>
 <div id="gan-ended-wrap">
 This giveaway has ended.
 </div>
-<?
+<?php
   }
 
   else { ?>
     <div id="gan-wait-wrap">
     Thanks for entering! Come back tomorrow for another chance to win.
                                                           </div>
-<? }  ?>
+<?php }  ?>
 
     </div><!-- .gan-wrap for form and gan-wait-wrap -->
 
-</main><!-- .giveaway -->
+</div><!-- #giveaway-wrap -->
 
 <?php get_footer(); ?>
